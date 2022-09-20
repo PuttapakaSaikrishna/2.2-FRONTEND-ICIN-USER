@@ -1,0 +1,79 @@
+<app-navbar></app-navbar>
+<br />
+<!-- <h3 style="text-align: center">Transaction History</h3>
+<br />
+
+<h4 style="padding-left: 1rem">Type of account: Saving</h4>
+<br />
+<h4 style="padding-left: 1rem">Saving balance : {{ savingBalance }}</h4>
+<br />
+<h4 style="padding-left: 1rem">Account number :{{ accNo }}</h4>
+<br />
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th style="text-align: center">Date</th>
+      <th style="text-align: center">Transaction Id</th>
+      <th style="text-align: center">Action Type</th>
+      <th style="text-align: center">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactionList">
+      <td style="text-align: center">{{ transaction.date }}</td>
+      <td style="text-align: center">{{ transaction.id }}</td>
+      <td style="text-align: center">{{ transaction.action }}</td>
+      <td style="text-align: center">{{ transaction.amount }}</td>
+    </tr>
+  </tbody>
+</table> -->
+
+
+
+
+
+<Section>
+  <div class="px-4  text-center">
+    <h2 class="display-4 font-weight-bold">Transaction History</h2>
+  </div>
+
+  <div class="p-5">
+    <div class="card">
+      <h5 class="card-header fw-bold text-center">Details</h5>
+      <div class="card-body">
+        <h4><span class="font-weight-bold">Type Of Account : </span>&nbsp; Saving</h4>
+        <br />
+        <h4><span class="font-weight-bold">Saving Balance : </span> &nbsp; Rs &nbsp;{{ savingBalance }}/-</h4>
+        <br />
+        <h4><span class="font-weight-bold">Account Number: </span> &nbsp;{{ accNo }}</h4>
+      </div>
+    </div>
+  </div>
+</Section>
+<!-- Table -->
+<section class="p-5">
+  <div class="card text-dark bg-light mb-3">
+    <div class="card-header text-center fw-bold">Transaction History</div>
+    <div class="card-body">
+      <table class="table table-hover text-white table-bordered" style="background-color:rgba(5, 43, 255, 0.955)">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Transaction Id</th>
+            <th scope="col">Action Type</th>
+            <th scope="col">Ammount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactionList">
+            <td >{{ transaction.date }}</td>
+            <td s>{{ transaction.id }}</td>
+            <td >{{ transaction.action }}</td>
+            <td >{{ transaction.amount }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

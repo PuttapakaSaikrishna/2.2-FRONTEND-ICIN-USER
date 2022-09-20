@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<section class="section1 text-white">
+
+  <div class="container my-5 ">
+
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class=" display-5 fw-bold lh-1 text-center" >Transfer Amount</h1>
+        <br>
+        <h5 style="text-align: center">Account Number : {{ saccountno }}</h5>
+        <br>
+
+        <form [formGroup]="transferForm" (ngSubmit)="transfer()" method="post">
+          <br>
+          <div class="form-group">
+            <label>Enter the IFSC Code of the account to be transfered to:</label>
+            <br />
+            <input type="text" formControlName="ifscNo" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && fval.ifscNo.errors }" placeholder="Enter Receivers IFSC Code" />
+            <div *ngIf="submitted && fval.ifscNo.errors" class="invalid-feedback">
+              <div *ngIf="fval.ifscNo.errors.required">IFSC Code is required</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Enter the account number you would like to transfer To:</label>
+            <br />
+            <input type="text" formControlName="raccountNo" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && fval.raccountNo.errors }"
+              placeholder="Enter Receiver's account number" />
+            <div *ngIf="submitted && fval.raccountNo.errors" class="invalid-feedback">
+              <div *ngIf="fval.raccountNo.errors.required">
+                Account number is required
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Enter Amount:</label>
+            <br />
+            <input type="text" formControlName="amount" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && fval.amount.errors }" placeholder="Enter amount" />
+            <div *ngIf="submitted && fval.amount.errors" class="invalid-feedback">
+              <div *ngIf="fval.amount.errors.required">Amount is required</div>
+            </div>
+          </div>
+
+          <div class="center1">
+            <button [disabled]="loading" class="btn " class="btn btn-group-sm form-control">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              <a (click)="transfer()" >Transfer</a>
+            </button>
+          </div>
+        </form>
+
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3 p-xs-3 " src="../../assets/human.png" alt="" width="500">
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

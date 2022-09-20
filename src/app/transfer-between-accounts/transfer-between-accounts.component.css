@@ -1,0 +1,19 @@
+.section1{
+  background-image: url("../../assets/desktop3.png");
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  }
+  .btn{
+    background-color:#0e019b !important ;
+    border: 1px solid;
+    border-color:#0e019b ;
+    color:white;
+    border-radius:30px;
+  }
+  .btn:hover{
+    background-color:white !important ;
+    border: 3px solid;
+    color: #0e019b ;
+    border-radius:30px;
+  }

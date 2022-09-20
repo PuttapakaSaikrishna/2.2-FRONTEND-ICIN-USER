@@ -1,0 +1,27 @@
+
+
+
+.section1
+{
+ background-image: url("../../assets/desktop3.png");
+ background-repeat: no-repeat;
+}
+
+.carousel .carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
+.carousel-indicators li { visibility: hidden; }
+
+.carousel-caption{
+  top: 50px;
+}
+

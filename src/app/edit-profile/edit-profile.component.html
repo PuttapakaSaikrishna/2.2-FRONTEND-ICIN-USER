@@ -1,0 +1,205 @@
+<app-navbar></app-navbar>
+
+<!-- <div class="container">
+  <h3>Edit Profile</h3>
+  <br />
+  <form [formGroup]="updateForm" (ngSubmit)="update()">
+    <div class="col-xs-4" style="left: 40%">
+      <div class="form-group">
+        <label for="phone">Mobile no</label>
+        <input
+          type="text"
+          formControlName="phone"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && fval.phone.errors }"
+          placeholder="Enter Phone here"
+        />
+        <div *ngIf="submitted && fval.phone.errors" class="invalid-feedback">
+          <div *ngIf="fval.phone.errors.required">Mobile no is required</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input
+          type="text"
+          formControlName="address"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && fval.address.errors }"
+          placeholder="Enter your Address"
+        />
+        <div *ngIf="submitted && fval.address.errors" class="invalid-feedback">
+          <div *ngIf="fval.address.errors.required">Address is required</div>
+        </div>
+
+        <br />
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            formControlName="email"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && fval.email.errors }"
+            placeholder="Enter email here"
+          />
+          <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+            <div *ngIf="fval.email.errors.required">Email is required</div>
+            <div *ngIf="fval.email.errors.email">Enter valid email address</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password"> Previous Password</label>
+          <input
+            type="password"
+            formControlName="prevpassword"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && fval.prevpassword.errors }"
+            placeholder="Enter Password here"
+          />
+          <div
+            *ngIf="submitted && fval.prevpassword.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="fval.prevpassword.errors.required">
+              Password is required
+            </div>
+            <div *ngIf="fval.prevpassword.errors.minlength">
+              Password must be at least 8 scharacters
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">New password</label>
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && fval.password.errors }"
+            placeholder="Enter email here"
+          />
+          <div
+            *ngIf="submitted && fval.password.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="fval.password.errors.required">
+              Password is required
+            </div>
+            <div *ngIf="fval.password.errors.minlength">
+              Enter valid password
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" style="text-align: center">
+        <button [disabled]="loading" class="btn btn-primary">
+          <span
+            *ngIf="loading"
+            class="spinner-border spinner-border-sm mr-1"
+          ></span>
+          Update
+        </button>
+      </div>
+    </div>
+  </form>
+</div> -->
+
+
+<section class="section1">
+
+  <div class="container my-5 ">
+
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class=" display-5 fw-bold lh-1">Edit Profile</h1>
+        <br>
+        <form [formGroup]="updateForm" (ngSubmit)="update()">
+          <div class="col-xs-4" style="left: 40%">
+            <div class="form-group">
+              <label for="phone">Mobile no<span style="color:red"> *</span></label>
+              <input type="text" formControlName="phone" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && fval.phone.errors }" placeholder="Enter Phone here" />
+              <div *ngIf="submitted && fval.phone.errors" class="invalid-feedback">
+                <div *ngIf="fval.phone.errors.required">Mobile no is required</div>
+              </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label for="address">Address<span style="color:red"> *</span></label>
+              <input type="text" formControlName="address" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && fval.address.errors }" placeholder="Enter your Address" />
+              <div *ngIf="submitted && fval.address.errors" class="invalid-feedback">
+                <div *ngIf="fval.address.errors.required">Address is required</div>
+              </div>
+              <br>
+
+              <div class="form-group">
+                <label for="email">Email<span style="color:red"> *</span></label>
+                <input type="text" formControlName="email" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && fval.email.errors }" placeholder="Enter email here" />
+                <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+                  <div *ngIf="fval.email.errors.required">Email is required</div>
+                  <div *ngIf="fval.email.errors.email">Enter valid email address</div>
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="password"> Previous Password<span style="color:red"> *</span></label>
+                <input type="password" formControlName="prevpassword" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && fval.prevpassword.errors }"
+                  placeholder="Enter Password here" />
+                <div *ngIf="submitted && fval.prevpassword.errors" class="invalid-feedback">
+                  <div *ngIf="fval.prevpassword.errors.required">
+                    Password is required
+                  </div>
+                  <div *ngIf="fval.prevpassword.errors.minlength">
+                    Password must be at least 8 scharacters
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="password">New password<span style="color:red"> *</span></label>
+                <input type="password" formControlName="password" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && fval.password.errors }" placeholder="Enter email here" />
+                <div *ngIf="submitted && fval.password.errors" class="invalid-feedback">
+                  <div *ngIf="fval.password.errors.required">
+                    Password is required
+                  </div>
+                  <div *ngIf="fval.password.errors.minlength">
+                    Enter valid password
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" style="text-align: center">
+              <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Update
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3 p-xs-3 " src="../../assets/security.png" alt="" width="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<div>
+  <router-outlet></router-outlet>
+</div>
